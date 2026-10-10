@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(252%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(282%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3ED%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#7b5514">
+<meta name="description" content="Daily Weight Goal Tracker | deployed with HTMLaunch">
+<link rel="canonical" href="https://btwymwt9rj-beep.github.io/tyger-weight/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Daily Weight Goal Tracker">
+<meta property="og:title" content="Daily Weight Goal Tracker">
+<meta property="og:description" content="Daily Weight Goal Tracker | deployed with HTMLaunch">
+<meta property="og:url" content="https://btwymwt9rj-beep.github.io/tyger-weight/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbtwymwt9rj-beep.github.io%2Ftyger-weight%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Daily Weight Goal Tracker">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Weight Goal Tracker">
+<meta name="twitter:description" content="Daily Weight Goal Tracker | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fbtwymwt9rj-beep.github.io%2Ftyger-weight%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Daily Weight Goal Tracker">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Weight Goal Tracker</title>
+<style>
+:root{--bg:#f6f6f4;--card:#fff;--ink:#1d1d1f;--mute:#76767c;--line:#e4e4e0;--ok:#1f9d55;--bad:#d64545;--acc:#2f6fed;--hl:#eaf1ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111214;--card:#1b1c1f;--ink:#f2f2f3;--mute:#9a9aa2;--line:#2c2d31;--ok:#3ecf80;--bad:#ff6b6b;--acc:#6b9bff;--hl:#1c2740}}
+:root[data-theme="dark"]{--bg:#111214;--card:#1b1c1f;--ink:#f2f2f3;--mute:#9a9aa2;--line:#2c2d31;--ok:#3ecf80;--bad:#ff6b6b;--acc:#6b9bff;--hl:#1c2740}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:520px;margin:0 auto;padding:16px 14px 90px}
+h1{font-size:22px;margin:4px 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+.lbl{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.big{font-size:40px;font-weight:700;line-height:1.1}
+.row2{display:flex;gap:12px;align-items:flex-end;margin-top:12px}
+.row2>div{flex:1}
+input{width:100%;font-size:18px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);text-align:center}
+button{font:inherit;font-weight:600;border:0;border-radius:12px;padding:13px 18px;background:var(--acc);color:#fff}
+button.sec{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center}
+.stat b{display:block;font-size:20px}
+.msg{margin-top:10px;font-weight:600;min-height:1.4em}
+.list{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.hd,.r{display:grid;grid-template-columns:1fr 62px 84px 34px;gap:6px;align-items:center;padding:8px 10px}
+.hd{font-size:11px;color:var(--mute);text-transform:uppercase;border-bottom:1px solid var(--line);background:var(--card)}
+.r{border-bottom:1px solid var(--line)}
+.r:last-child{border:0}
+.r.today{background:var(--hl)}
+.r.wk{border-top:6px solid var(--bg)}
+.r .d{font-size:14px;line-height:1.2}.r .d small{color:var(--mute);display:block;font-size:11px}
+.r .g{text-align:center;font-variant-numeric:tabular-nums}
+.r input{padding:7px 4px;font-size:16px;border-radius:9px}
+.st{font-size:22px;text-align:center;font-weight:700}
+.st.ok{color:var(--ok)}.st.bad{color:var(--bad)}
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));box-shadow:0 4px 14px rgba(0,0,0,.25);border-radius:999px}
+.tools{display:flex;gap:8px;margin:12px 0}
+.tools button{flex:1}
+</style>
+</head>
+<body>
+<main>
+<h1>Weight Goal Tracker</h1>
+<div class="card">
+  <div class="lbl" id="tlabel">Today</div>
+  <div class="lbl" id="tdate" style="margin-top:2px"></div>
+  <div style="margin-top:10px" class="lbl">Goal for today</div>
+  <div class="big"><span id="tgoal"></span> <span style="font-size:18px;font-weight:500">kg</span></div>
+  <div class="row2">
+    <div><div class="lbl" style="margin-bottom:4px">Actual weight (kg)</div><input id="tin" type="text" inputmode="decimal" placeholder="e.g. 60.4" autocomplete="off"></div>
+    <button id="tsave">Save</button>
+  </div>
+  <div class="msg" id="tmsg"></div>
+</div>
+<div class="stats">
+  <div class="stat"><span class="lbl">Logged</span><b id="s1">0</b></div>
+  <div class="stat"><span class="lbl">Goals met</span><b id="s2">0</b></div>
+  <div class="stat"><span class="lbl">Vs goal</span><b id="s3">–</b></div>
+</div>
+<div class="list">
+  <div class="hd"><span>Date</span><span style="text-align:center">Goal</span><span style="text-align:center">Actual</span><span style="text-align:center">✓/✗</span></div>
+  <div id="rows"></div>
+</div>
+<div class="tools">
+  <button class="sec" id="copy">Copy my data</button>
+</div>
+<p class="lbl" style="text-transform:none;letter-spacing:0">Your entries are saved in this browser on this device. Tap “Copy my data” now and then to keep a backup. ✓ means your actual weight is at or below the goal.</p>
+</main>
+<button class="fab" id="jump">Today</button>
+<script>
+var G="60.59,60.48,60.36,60.25,60.14,60.03,59.92,59.80,59.69,59.58,59.47,59.36,59.25,59.14,59.03,58.92,58.81,58.69,58.58,58.47,58.36,58.25,58.14,58.03,57.92,57.81,57.71,57.60,57.49,57.38,57.27,57.16,57.05,56.94,56.83,56.72,56.62,56.51,56.40,56.29,56.18,56.08,55.97,55.86,55.75,55.65,55.54,55.43,55.32,55.22,55.11,55.00,54.90,54.79,54.68,54.58,54.47,54.36,54.26,54.15,54.05,53.94,53.84,53.73,53.62,53.52,53.41,53.31,53.20,53.10,52.99,52.89,52.78,52.68,52.58,52.47,52.37,52.26,52.16,52.06,51.95,51.85,51.74,51.64,51.54,51.43,51.33,51.23,51.13,51.02,50.92,50.82,50.71,50.61,50.51,50.41,50.31,50.20,50.10,50.00,49.90,49.80,49.69,49.59,49.49,49.39,49.29,49.19,49.09,48.99,48.89,48.79,48.68,48.58,48.48,48.38,48.28,48.18,48.08,47.98,47.88,47.78,47.69,47.59,47.49,47.39,47.29,47.19,47.09,46.99,46.89,46.79,46.70,46.60,46.50,46.40,46.30,46.20,46.11,46.01,45.91,45.81,45.72,45.62,45.52,45.42,45.33,45.23,45.13,45.04,44.94,44.84,44.75,44.65,44.55,44.46,44.36,44.26,44.17,44.07,43.98,43.88,43.78,43.69,43.59,43.50,43.40,43.31,43.21,43.12,43.02,42.93,42.83,42.74,42.64,42.55,42.46,42.36,42.27,42.17,42.08,41.98,41.89,41.80,41.70,41.61,41.52,41.42,41.33,41.24,41.14,41.05,40.96,40.87,40.77,40.68,40.59,40.50,40.40,40.31,40.22,40.13,40.04,39.94,39.85,39.76,39.67,39.58,39.49,39.39,39.30,39.21,39.12,39.03,38.94,38.85,38.76,38.67,38.58,38.49,38.40,38.31,38.22,38.13,38.04,37.95,37.86,37.77,37.68,37.59,37.50,37.41,37.32,37.23,37.14,37.05,36.96,36.88,36.79,36.70,36.61,36.52,36.43,36.34,36.26,36.17,36.08,35.99,35.90,35.82,35.73,35.64,35.55,35.47,35.38,35.29,35.20,35.12,35.03,34.94,34.86,34.77,34.68,34.60,34.51,34.42,34.34,34.25,34.17,34.08,33.99,33.91,33.82,33.74,33.65,33.57,33.48,33.40,33.31,33.22,33.14,33.05,32.97,32.89,32.80,32.72,32.63,32.55,32.46,32.38,32.29,32.21,32.13,32.04,31.96,31.87,31.79,31.71,31.62,31.54,31.46,31.37,31.29,31.21,31.12,31.04,30.96,30.87,30.79,30.71,30.63,30.54,30.46,30.38,30.30,30.22,30.13,30.05,29.97".split(",").map(Number);
+var KEY="wgt-goal-v1", data={};
+try{data=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){data={}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){}}
+var START=Date.UTC(2026,9,11);
+function fmt(i,o){return new Date(START+i*864e5).toLocaleDateString("en-GB",Object.assign({timeZone:"UTC"},o))}
+function todayIdx(){var n=new Date();return Math.round((Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())-START)/864e5)}
+var T=todayIdx(), cur=Math.min(Math.max(T,0),G.length-1);
+function parse(v){var x=parseFloat(String(v).replace(",","."));return isFinite(x)&&x>0&&x<400?x:null}
+function status(i){var a=data[i];if(a==null)return["",""];return a<=G[i]+1e-9?["✓","ok"]:["✗","bad"]}
+var rowsEl=document.getElementById("rows");
+for(var i=0;i<G.length;i++){
+  var r=document.createElement("div");r.className="r"+(i===cur?" today":"")+(i>0&&i%7===0?" wk":"");r.id="r"+i;
+  r.innerHTML='<div class="d">'+fmt(i,{weekday:"short",day:"numeric",month:"short"})+'<small>Day '+(i+1)+(i===T?" · today":"")+'</small></div><div class="g">'+G[i].toFixed(2)+'</div><input type="text" inputmode="decimal" data-i="'+i+'" placeholder="kg" value="'+(data[i]!=null?data[i]:"")+'" aria-label="Actual weight day '+(i+1)+'"><div class="st" id="st'+i+'"></div>';
+  rowsEl.appendChild(r);
+}
+rowsEl.addEventListener("change",function(e){
+  var el=e.target;if(!el.dataset||el.dataset.i==null)return;
+  var i=+el.dataset.i,v=parse(el.value);
+  if(v==null){delete data[i];el.value=""}else{data[i]=v;el.value=v}
+  persist();paint(i);
+});
+function paint(i){
+  var s=status(i),e=document.getElementById("st"+i);e.textContent=s[0];e.className="st "+s[1];
+  summary();today();
+}
+function summary(){
+  var n=0,m=0,last=-1;
+  for(var k in data){n++;if(data[k]<=G[k]+1e-9)m++;if(+k>last)last=+k}
+  document.getElementById("s1").textContent=n;
+  document.getElementById("s2").textContent=m;
+  var d=document.getElementById("s3");
+  if(last<0){d.textContent="–";d.style.color=""}
+  else{var df=data[last]-G[last];d.textContent=(df>0?"+":"")+df.toFixed(2);d.style.color=df<=0?"var(--ok)":"var(--bad)"}
+}
+function today(){
+  document.getElementById("tlabel").textContent=T<0?"Starts soon":(T>=G.length?"Plan finished":"Today");
+  document.getElementById("tdate").textContent=fmt(cur,{weekday:"long",day:"numeric",month:"long",year:"numeric"})+" · Day "+(cur+1)+" of "+G.length;
+  document.getElementById("tgoal").textContent=G[cur].toFixed(2);
+  var inp=document.getElementById("tin");if(document.activeElement!==inp)inp.value=data[cur]!=null?data[cur]:"";
+  var m=document.getElementById("tmsg"),s=status(cur);
+  if(data[cur]==null){m.textContent="";m.style.color=""}
+  else if(s[1]==="ok"){m.textContent="✓ Goal met"+(G[cur]-data[cur]>0.005?" ("+(G[cur]-data[cur]).toFixed(2)+" kg under)":"");m.style.color="var(--ok)"}
+  else{m.textContent="✗ "+(data[cur]-G[cur]).toFixed(2)+" kg above goal";m.style.color="var(--bad)"}
+}
+document.getElementById("tsave").onclick=function(){
+  var inp=document.getElementById("tin"),v=parse(inp.value);
+  if(v==null){delete data[cur]}else{data[cur]=v}
+  persist();var ri=document.querySelector('#r'+cur+' input');ri.value=data[cur]!=null?data[cur]:"";inp.blur();paint(cur);
+};
+document.getElementById("tin").addEventListener("keydown",function(e){if(e.key==="Enter")document.getElementById("tsave").click()});
+document.getElementById("jump").onclick=function(){document.getElementById("r"+cur).scrollIntoView({behavior:"smooth",block:"center"})};
+document.getElementById("copy").onclick=function(){
+  var t=JSON.stringify(data),b=this;
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent="Copied!";setTimeout(function(){b.textContent="Copy my data"},1500)},function(){prompt("Copy this:",t)})}catch(e){prompt("Copy this:",t)}
+};
+for(var i=0;i<G.length;i++){var s=status(i),e=document.getElementById("st"+i);e.textContent=s[0];e.className="st "+s[1]}
+summary();today();
+setTimeout(function(){document.getElementById("r"+cur).scrollIntoView({block:"center"});window.scrollTo(0,0)},0);
+</script>
+</body>
+</html>
